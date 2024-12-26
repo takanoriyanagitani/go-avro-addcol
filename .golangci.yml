@@ -1,0 +1,8 @@
+linters:
+  enable-all:
+  disable:
+    - exportloopref
+
+linters-settings:
+  interfacebloat:
+    max: 16
