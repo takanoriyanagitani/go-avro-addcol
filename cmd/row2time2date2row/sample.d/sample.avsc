@@ -1,0 +1,20 @@
+{
+	"type":"record",
+	"name":"sample_record",
+	"fields":[
+		{"name":"name",    "type":"string"},
+		{"name":"data",    "type":"bytes"},
+		{"name":"status",  "type":"int"},
+		{"name":"id",      "type":"long"},
+		{"name":"ratio",   "type":"float"},
+		{"name":"height",  "type":"double"},
+		{"name":"active",  "type":"boolean"},
+		{"name":"related", "type":{"type":"fixed","size":16,"name":"uuid","logicalType":"uuid"}},
+		{"name":"created", "type":{"type":"long","logicalType":"timestamp-micros"}},
+		{"name":"updated", "type":["null", "long"]},
+		{"name":"processed", "type":[
+			"null",
+			{"type":"long", "logicalType":"timestamp-micros"}
+		]}
+	]
+}
